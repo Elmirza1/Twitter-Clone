@@ -22,9 +22,7 @@ use App\Http\Controllers\FeedContoller;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+
 Route::get('lang/{lang}', function($lang){
 	
 	app()->setLocale($lang);

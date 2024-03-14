@@ -12,20 +12,6 @@ class DashboardController extends Controller
     public function index()
     {   
    
-        // $idea=new Idea();
-        // $idea->content="hello world";
-        // $idea->likes = 0;
-        // $idea->save();    
-        // $users = [
-        //     [
-        //         'name' => 'NAME',
-        //         'email' => 'EMAI'
-        //     ],
-        //     [
-        //         'name' => 'NAME2',
-        //         'email' => 'EMAIL2'
-        //     ]
-        //     ];
         $ideas = Idea::orderby('created_at', 'DESC');
 
         if(request()->has('search')){
